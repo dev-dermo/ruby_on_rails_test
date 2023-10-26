@@ -1,0 +1,14 @@
+<h1>Friends</h1>
+
+<div class="row" id="friends">
+  <% @friends.each do |friend| %>
+    <div class="col-md-4">
+      <%= render friend %>
+      <p>
+        <%= link_to "Show this friend", friend, class: "btn btn-secondary" %>
+      </p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New friend", new_friend_path, class: "btn btn-primary" %>
